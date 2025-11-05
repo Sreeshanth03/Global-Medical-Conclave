@@ -1,0 +1,168 @@
+.mediclave-container {
+  text-align: center;
+  background-color: #d8f4f4;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Title --- */
+.mediclave-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* --- Grid Layout --- */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 30px; /* reduced bottom space */
+}
+
+/* --- Card Design --- */
+.track-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 18px; /* slightly reduced padding */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #000 ;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 167, 167, 0.25);
+  border: 1px solid  #009b9b ;
+}
+
+.track-icon {
+  font-size: 1.8rem;
+  color: #009b9b;
+}
+
+.track-title {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* --- Buttons Section --- */
+.track-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ensures proper layout on small widths */
+}
+
+/* ✅ Read More button - Green */
+.read-btn {
+  background-color: #009b9b !important;
+  border: 2px solid #009b9b !important;
+  border-radius: 50px !important;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-btn:hover {
+  background-color: #009944;
+  transform: scale(1.05);
+}
+
+/* ✅ Submit Abstract button - Black */
+.abstract-btn {
+  background-color: #000 !important;
+  border: 2px solid #000 !important;
+  border-radius: 50px !important;
+  padding: 12px 30px ;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.abstract-btn:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .mediclave-title {
+    font-size: 1.7rem;
+  }
+
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    gap: 18px;
+  }
+
+  .track-card {
+    font-size: 0.9rem;
+    padding: 14px 16px;
+  }
+
+  .read-btn,
+  .abstract-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .mediclave-container {
+    padding: 40px 15px;
+  }
+
+  .mediclave-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .track-card {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .track-icon {
+    font-size: 1.6rem;
+  }
+
+  .track-title {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .track-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .read-btn,
+  .abstract-btn {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
